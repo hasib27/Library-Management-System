@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="library" Class="LibraryDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=library;Integrated Security=True" SettingsObjectName="Library_Management_System.Properties.Settings" SettingsPropertyName="libraryConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CREDENTIAL" Member="Credentials">
+    <Type Name="Credential">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="PASS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BOOK" Member="Books">
+    <Type Name="Book">
+      <Column Name="B_ID" Type="System.String" DbType="VarChar(50)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="B_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TOPIC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="T_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="A_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BORROW" Member="Borrows">
+    <Type Name="Borrow">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="B_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="B_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TOPIC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
